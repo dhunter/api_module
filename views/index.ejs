@@ -1,0 +1,15 @@
+<%- include("header") -%>
+    <div>
+        <h1><%= response_title %></h1>
+    </div>
+    <div class="articles">
+        <% articles.forEach(article => { %>
+            <form action="/completed" method="post">
+                <div class="article">
+                    <h2><%= article.title %></h2>
+                    <p><%= article.content %></p>
+                </div>
+            </form>
+        <% }); %>
+    </div>
+<%- include("footer") -%>
